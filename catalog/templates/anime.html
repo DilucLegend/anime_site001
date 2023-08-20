@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .qwe{
+        display: flex;
+        }
+        .image_class{
+        width: 600px;
+        height: 800px;
+        }
+    </style>
+</head>
+<body style="background: darkgrey">
+<button type="button" class="btn btn-outline-light"><a href="/">Назад</a></button>
+
+<div class="qwe">
+<img src="/{{ exact_anime.anime_image }}" class="image_class"><div>
+ <h1>Название: <<{{ exact_anime.name }}>></h1><br><br>
+  Эпизодов: {{ exact_anime.number_of_episodes }}<br>
+  Годы выхода: {{ exact_anime.year_first_episode }}-{{ exact_anime.year_last_episode }}<br>
+  Оценка: {{ exact_anime.anime_rating }}<br>
+  Жанры: {{ exact_anime.anime_genres }}<br><br>
+  Описание: {{ exact_anime.description }}<br>
+<a href="{{exact_anime.anime_url}}"><button>Смотреть</button></a></div>
+</div>
+</body>
+</html>
